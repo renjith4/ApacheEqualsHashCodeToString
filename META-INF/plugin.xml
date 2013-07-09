@@ -1,0 +1,75 @@
+<idea-plugin version="2">
+  <id>com.shankh.intellij.plugin.apache.eht</id>
+  <name>Apache Equals HashCode and ToString generator</name>
+  <version>1.0</version>
+  <vendor email="support@shankh.com" url="http://www.shankh.com">shankh.com</vendor>
+
+  <description><![CDATA[
+      Generates equals() and hashCode() and toString() using the Apache Commons lang3 library.<br/>
+        Usage:<br/>
+        <ul>
+            <li>On Windows/Linux use ALT + INSERT -> Apache equals() and hashCode(), Apache toString()</li>
+            <li>On Mac use CTRL + N -> Apache equals() and hashCode(), Apache toString()</li>
+        </ul>
+        Don't forget to put the commons-lang3 jar on your classpath. Alternatively you can import it from maven<br/>
+        <pre>
+            &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
+            &lt;version&gt;3.1&lt;/version&gt;
+        </pre>
+        <br/><br/>
+
+        For more information on Apache equals, hashCode and toString builders follow the links
+        <ul>
+            <li>http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/EqualsBuilder.html</li>
+            <li>http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/HashCodeBuilder.html</li>
+            <li>http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/ToStringBuilder.html</li>
+        </ul>
+      ]]>
+  </description>
+
+  <change-notes><![CDATA[
+       version 1.0
+       <br/>
+       <ul>
+       <li>Tested against IDEA 12.1.1</li>
+      ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+    <actions>
+
+        <action id="generateEqualsHashCode" class="com.shankh.intellij.plugin.apache.eht.generators.GenerateEqualsHashCodeAction"
+                text="Apache equals() and hashCode()"
+                description="Generates an implementation of Equals() and HashCode() using Apache inbuilt classes">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+
+        <action id="generateToString" class="com.shankh.intellij.plugin.apache.eht.generators.GenerateToStringCodeAction"
+                text="Apache toString()"
+                description="Generates an implementation of toString() using Apache inbuilt classes">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+
+    </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+</idea-plugin>
