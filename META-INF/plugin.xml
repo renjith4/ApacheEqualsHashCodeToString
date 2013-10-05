@@ -32,7 +32,7 @@
        version 1.2
        <br/>
        <ul>
-       <li>Now ignores serialVersionUid and static fields</li> </ul>
+       <li>Now ignores serialVersionUid and static final fields</li> </ul>
        version 1.1
        <br/>
        <ul>
