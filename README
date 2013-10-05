@@ -1,1 +1,20 @@
-This file was created by IntelliJ IDEA 12.1.4 for binding GitHub repository
+Generates equals() and hashCode() and toString() using the Apache Commons lang3 library.
+
+Usage:
+
+On Windows/Linux use ALT + INSERT -> Apache equals() and hashCode(), Apache toString()
+
+On Mac use CTRL + N -> Apache equals() and hashCode(), Apache toString()
+
+Don't forget to put the commons-lang3 jar on your classpath. Alternatively you can import it from maven
+
+<groupId>org.apache.commons</groupId>
+<artifactId>commons-lang3</artifactId>
+<version>3.1</version>
+
+
+For more information on Apache equals, hashCode and toString builders follow the links
+
+http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/EqualsBuilder.html
+http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/HashCodeBuilder.html
+http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/ToStringBuilder.html
