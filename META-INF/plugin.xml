@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.shankh.intellij.plugin.apache.eht</id>
   <name>Apache Equals HashCode and ToString generator</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="support@shankh.com" url="http://www.shankh.com">shankh.com</vendor>
 
   <description><![CDATA[
@@ -29,14 +29,18 @@
   </description>
 
   <change-notes><![CDATA[
-        version 1.1
+       version 1.2
        <br/>
        <ul>
-       <li>Recompiled with Java 6 as version 1.0 was compiled on Java 7</li>
+       <li>Now ignores serialVersionUid and static fields</li> </ul>
+       version 1.1
+       <br/>
+       <ul>
+       <li>Recompiled with Java 6 as version 1.0 was compiled on Java 7</li> </ul>
        version 1.0
        <br/>
        <ul>
-       <li>Tested against IDEA 12.1.1</li>
+       <li>Tested against IDEA 12.1.1</li> </ul>
       ]]>
   </change-notes>
 
