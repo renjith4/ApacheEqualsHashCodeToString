@@ -1,3 +1,6 @@
+NOTE: DEPRECATED ¡¡¡¡
+This project is not needed anymore as Intellij Hashcode,Equals and toString methods are good enough these days.
+
 Generates equals() and hashCode() and toString() using the Apache Commons lang3 library.
 
 Usage:
