@@ -19,6 +19,7 @@ public class GenerateEqualsHashCodeAction extends AnAction {
     private final HashCodeBuilder hashCodeBuilder = new HashCodeBuilder();
     private final PsiUtility psiUtility = new PsiUtility();
 
+    @Override
     public void actionPerformed(AnActionEvent e) {
         PsiClass psiClass = psiUtility.getPsiClassFromContext(e);
         GenerateDialog dlg = new GenerateDialog(psiClass, TITLE, LABEL_TEXT);

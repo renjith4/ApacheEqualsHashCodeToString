@@ -1,10 +1,9 @@
-<idea-plugin version="2">
-  <id>com.shankh.intellij.plugin.apache.eht</id>
-  <name>Apache Equals HashCode and ToString generator</name>
-  <version>1.2</version>
-  <vendor email="support@shankh.com" url="http://www.shankh.com">shankh.com</vendor>
+<idea-plugin>
+    <id>com.shankh.intellij.plugin.apache.eht</id>
+    <name>Apache Equals HashCode and ToString generator</name>
+    <vendor email="support@shankh.com" url="http://www.shankh.com">shankh.com</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       Generates equals() and hashCode() and toString() using the Apache Commons lang3 library.<br/>
         Usage:<br/>
         <ul>
@@ -26,42 +25,19 @@
             <li>http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/ToStringBuilder.html</li>
         </ul>
       ]]>
-  </description>
+    </description>
 
-  <change-notes><![CDATA[
-       version 1.2
-       <br/>
-       <ul>
-       <li>Now ignores serialVersionUid and static final fields</li> </ul>
-       version 1.1
-       <br/>
-       <ul>
-       <li>Recompiled with Java 6 as version 1.0 was compiled on Java 7</li> </ul>
-       version 1.0
-       <br/>
-       <ul>
-       <li>Tested against IDEA 12.1.1</li> </ul>
-      ]]>
-  </change-notes>
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+<!--    <depends>com.intellij.modules.platform</depends>-->
+    <depends>com.intellij.modules.java</depends>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105"/>
-
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
-
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
-
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
 
     <actions>
+        <!-- Add your actions here -->
 
         <action id="generateEqualsHashCode" class="com.shankh.intellij.plugin.apache.eht.generators.GenerateEqualsHashCodeAction"
                 text="Apache equals() and hashCode()"
@@ -74,10 +50,5 @@
                 description="Generates an implementation of toString() using Apache inbuilt classes">
             <add-to-group group-id="GenerateGroup" anchor="last"/>
         </action>
-
     </actions>
-
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
 </idea-plugin>
